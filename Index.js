@@ -1,6 +1,7 @@
 // call the dependencies
 const inquirer = require("inquirer");
 const fs = require("fs");
+const Choices = require('prompt-choices');
 const util = require("util");
 
 const writeFileAsync = util.promisify(fs.writeFile);
@@ -30,7 +31,7 @@ function promptUser() {
             name: "Usage"
         }, {
             type: "input",
-            message: "what License would you like to choose?",
+            message: "Would you like to choose a license?",
             name: "License"
         }, {
             type: "input",
@@ -64,22 +65,40 @@ function promptUser() {
     ])
 };
 
+  
 
 function generateMd(answers) {
     return `
-  # ${answers.Title}
-  ## ${answers.Description}
-  ## ${answers.TableofContents}
-  ## ${answers.Install}
-  ## ${answers.Usage}
-  ## ${answers.License}
-  ## ${answers.Contributions}
-  ## ${answers.Tests}
-  ## ${answers.questions}
-  ![${answers.imgName}](${answers.imageURL})
-  <br>
-  ![${answers.RepoName}]("${answers.GitHubURL}")
-  `
+# ${answers.Title}
+
+## Description
+## ${answers.Description}
+
+## Table of Contents
+## ${answers.TableOfContents}
+
+## Intallation Instructions
+## ${answers.Install}
+
+## Usage Information
+## ${answers.Usage}
+
+## License Info
+## ${answers.License}
+
+## Contributions
+## ${answers.Contributions}
+
+## Tests
+## ${answers.Tests}
+
+## Questions
+## ${answers.Questions}
+
+
+![${answers.imgName}](${answers.imageURL})
+
+![${answers.RepoName}](${answers.GitHubURL})`
 };
 
 promptUser()

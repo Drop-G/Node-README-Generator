@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Drop-G/README-O-Matic#readme",
   "dependencies": {
-    "inquirer": "^7.3.3"
+    "inquirer": "^7.3.3",
+    "prompt-choices": "^5.0.0"
   }
 }
