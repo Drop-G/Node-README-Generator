@@ -30,8 +30,9 @@ function promptUser() {
             message: "In depth usage information goes here",
             name: "Usage"
         }, {
-            type: "input",
-            message: "Would you like to choose a license?",
+            type:"list",
+            message:"Select a license",
+            choices:["MIT", "Common Licenses", "Creative Commons license", "None"],
             name: "License"
         }, {
             type: "input",
@@ -43,28 +44,27 @@ function promptUser() {
             name: "Tests"
         }, {
             type: "input",
-            message: "What questions do you have for the world for when they look at this project?",
+            message: "Add questions here?",
             name: "Questions"
         }, {
             type: "input",
-            message: "Enter the name for your repo image",
+            message: "Enter the name for your repository image",
             name: "imgName"
         }, {
             type: "input",
-            message: "Enter the URL of the image of your applications",
+            message: "Enter the URL/or path of the image",
             name: "imageURL"
         }, {
             type: "input",
-            message: "Enter Url of your GitHub Repo",
+            message: "Enter the Url of the GitHub Repo",
             name: "GitHubURL"
         }, {
             type: "input",
-            message: "Enter the name of your Repo that will show up as a hyperlink",
+            message: "Enter the name of the reposity, this will show up as your link",
             name: "RepoName"
         }
     ])
 };
-
   
 
 function generateMd(answers) {
