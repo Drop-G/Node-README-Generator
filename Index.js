@@ -105,7 +105,7 @@ promptUser()
     .then(function (answers) {
         const md = generateMd(answers);
 
-        return writeFileAsync("README.md", md);
+        return writeFileAsync("NewREADME.md", md);
     })
     .then(function () {
         console.log("Successfully wrote to md");
