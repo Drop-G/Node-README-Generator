@@ -72,28 +72,28 @@ function generateMd(answers) {
 # ${answers.Title} \n
 
 ## Description
-## ${answers.Description} \n
+* ${answers.Description} \n
 
 ## Table of Contents
-## ${answers.TableOfContents} \n
+* ${answers.TableOfContents} \n
 
 ## Intallation Instructions
-## ${answers.Install} \n
+* ${answers.Install} \n
 
 ## Usage Information
-## ${answers.Usage} \n
+* ${answers.Usage} \n
 
 ## License Info
-## ${answers.License} \n
+* ${answers.License} \n
 
 ## Contributions
-## ${answers.Contributions} \n
+* ${answers.Contributions} \n
 
 ## Tests
-## ${answers.Tests} \n
+* ${answers.Tests} \n
 
 ## Frequently asked questions
-## ${answers.Questions} \n
+* ${answers.Questions} \n
 
 
 ![${answers.imgName}](${answers.imageURL}) "\n"
