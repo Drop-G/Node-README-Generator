@@ -31,7 +31,7 @@ function promptUser() {
             name: "Usage"
         }, {
             type:"list",
-            message:"Select a license",
+            message:"Select a license (use up or down arrows",
             choices:["MIT", "Common Licenses", "Creative Commons license", "None"],
             name: "License"
         }, {
@@ -44,7 +44,7 @@ function promptUser() {
             name: "Tests"
         }, {
             type: "input",
-            message: "Add questions here?",
+            message: "Frequently asked questions go here",
             name: "Questions"
         }, {
             type: "input",
@@ -69,34 +69,34 @@ function promptUser() {
 
 function generateMd(answers) {
     return `
-# ${answers.Title}
+# ${answers.Title} \n
 
 ## Description
-## ${answers.Description}
+## ${answers.Description} \n
 
 ## Table of Contents
-## ${answers.TableOfContents}
+## ${answers.TableOfContents} \n
 
 ## Intallation Instructions
-## ${answers.Install}
+## ${answers.Install} \n
 
 ## Usage Information
-## ${answers.Usage}
+## ${answers.Usage} \n
 
 ## License Info
-## ${answers.License}
+## ${answers.License} \n
 
 ## Contributions
-## ${answers.Contributions}
+## ${answers.Contributions} \n
 
 ## Tests
-## ${answers.Tests}
+## ${answers.Tests} \n
 
-## Questions
-## ${answers.Questions}
+## Frequently asked questions
+## ${answers.Questions} \n
 
 
-![${answers.imgName}](${answers.imageURL})
+![${answers.imgName}](${answers.imageURL}) "\n"
 
 ![${answers.RepoName}](${answers.GitHubURL})`
 };
