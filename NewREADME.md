@@ -1,41 +1,41 @@
 
-# dsfasdf 
+# ReadME.md Generator 
 
 
 ## Description
-* asdfasdf 
+* As a coder I want to be able to creat my repository automaticalled from the CLI. 
 
 
 ## Table of Contents
-* asdfa 
+* 1 
 
 
 ## Intallation Instructions
-* sdfasd 
+* npm install --save 
 
 
 ## Usage Information
-* fasdf 
+* depth and delight 
 
 
 ## License Info
-* MIT 
+* Creative Commons license 
 
 
 ## Contributions
-* asdfasdf 
+* Id like to thank the contributors.., 
 
 
 ## Tests
-* asdfasdf 
+* ... 
 
 
 ## Frequently asked questions
-* asdf 
+*  
 
 
 
-![asdf](asdf) "
+![image](code-snapshot.png) "
 "
 
-![asdf](asdf)
+![TedsRepo](https://github.com/Drop-G/Merx)

@@ -11,7 +11,7 @@ function promptUser() {
     return inquirer.prompt([
         {
             type: "input",
-            message: "Give your repository a unique title",
+            message: "Give your repository a unique title.",
             name: "Title"
         }, {
             type: "input",
@@ -19,19 +19,19 @@ function promptUser() {
             name: "Description"
         }, {
             type: "input",
-            message: "create a table of contents for you Repository",
+            message: "Create a table of contents for your repository.",
             name: "TableOfContents"
         }, {
             type: "input",
-            message: "Please add installation instructions",
+            message: "Please add installation instructions.",
             name: "Install"
         }, {
             type: "input",
-            message: "In depth usage information goes here",
+            message: "In depth usage information goes here.",
             name: "Usage"
         }, {
             type:"list",
-            message:"Select a license (use up or down arrows",
+            message:"Select a license",
             choices:["MIT", "Common Licenses", "Creative Commons license", "None"],
             name: "License"
         }, {
@@ -40,27 +40,27 @@ function promptUser() {
             name: "Contributions"
         }, {
             type: "input",
-            message: "How many test runs has there been, anything wrong inside the repo?",
+            message: "Testing history?",
             name: "Tests"
         }, {
             type: "input",
-            message: "Frequently asked questions go here",
+            message: "Any frequently asked questions can go here.",
             name: "Questions"
         }, {
             type: "input",
-            message: "Enter the name for your repository image",
+            message: "Enter the name for your repository image.",
             name: "imgName"
         }, {
             type: "input",
-            message: "Enter the URL/or path of the image",
+            message: "Enter the URL/or path of the image.",
             name: "imageURL"
         }, {
             type: "input",
-            message: "Enter the Url of the GitHub Repo",
+            message: "Enter the Url for your applications GitHub repository.",
             name: "GitHubURL"
         }, {
             type: "input",
-            message: "Enter the name of the reposity, this will show up as your link",
+            message: "Enter the name of the reposity, this will show up as your link.",
             name: "RepoName"
         }
     ])
