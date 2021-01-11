@@ -1,115 +1,68 @@
-// call the dependencies
-const inquirer = require("inquirer");
 const fs = require("fs");
-const Choices = require('prompt-choices');
-const util = require("util");
+const path = require("path");
+const inquirer = require("inquirer");
+const generateMarkdown = require("./utils/generateMarkdown");
 
-const writeFileAsync = util.promisify(fs.writeFile);
+const questions = [
+  {
+    type: "input",
+    name: "github",
+    message: "What is your GitHub username?"
+  },{
+    type: "input",
+    name: "email",
+    message: "What is your email address?"
+  },
+  {
+    type: "input",
+    name: "title",
+    message: "What is your project's name?"
+  },
+  {
+    type: "input",
+    name: "description",
+    message: "Please write a short description of your project"
+  },
+  {
+    type: "list",
+    name: "license",
+    message: "What kind of license should your project have?",
+    choices: ["MIT", "APACHE 2.0", "GPL 3.0", "BSD 3", "None"]
+  },
+  {
+    type: "input",
+    name: "installation",
+    message: "What command should be run to install dependencies?",
+    default: "npm i"
+  },
+  {
+    type: "input",
+    name: "test",
+    message: "What command should be run to run tests?",
+    default: "npm test"
+  },
+  {
+    type: "input",
+    name: "usage",
+    message: "What does the user need to know about using the repo?",
+  },
+  {
+    type: "input",
+    name: "contributing",
+    message: "What does the user need to know about contributing to the repo?",
+  }
+];
 
-// initiate prompt
-function promptUser() {
-    return inquirer.prompt([
-        {
-            type: "input",
-            message: "Give your repository a unique title.",
-            name: "Title"
-        }, {
-            type: "input",
-            message: "Decribe you repository, what is the purpose of this project?",
-            name: "Description"
-        }, {
-            type: "input",
-            message: "Create a table of contents for your repository.",
-            name: "TableOfContents"
-        }, {
-            type: "input",
-            message: "Please add installation instructions.",
-            name: "Install"
-        }, {
-            type: "input",
-            message: "In depth usage information goes here.",
-            name: "Usage"
-        }, {
-            type:"list",
-            message:"Select a license",
-            choices:["MIT", "Common Licenses", "Creative Commons license", "None"],
-            name: "License"
-        }, {
-            type: "input",
-            message: "Who were the contributors to this project?",
-            name: "Contributions"
-        }, {
-            type: "input",
-            message: "Testing history?",
-            name: "Tests"
-        }, {
-            type: "input",
-            message: "Any frequently asked questions can go here.",
-            name: "Questions"
-        }, {
-            type: "input",
-            message: "Enter the name for your repository image.",
-            name: "imgName"
-        }, {
-            type: "input",
-            message: "Enter the URL/or path of the image.",
-            name: "imageURL"
-        }, {
-            type: "input",
-            message: "Enter the Url for your applications GitHub repository.",
-            name: "GitHubURL"
-        }, {
-            type: "input",
-            message: "Enter the name of the reposity, this will show up as your link.",
-            name: "RepoName"
-        }
-    ])
-};
-  
+function writeToFile(fileName, data) {
+  return fs.writeFileSync(path.join(process.cwd(), fileName), data);
+}
 
-function generateMd(answers) {
-    return `
-# ${answers.Title} \n
+function init() {
+  inquirer.prompt(questions)
+  .then((inquirerResponses) => {
+    console.log("Generating README...");
+    writeToFile("README.md", generateMarkdown({...inquirerResponses}));
+  })
+}
 
-## Description
-* ${answers.Description} \n
-
-## Table of Contents
-* ${answers.TableOfContents} \n
-
-## Intallation Instructions
-* ${answers.Install} \n
-
-## Usage Information
-* ${answers.Usage} \n
-
-## License Info
-* ${answers.License} \n
-
-## Contributions
-* ${answers.Contributions} \n
-
-## Tests
-* ${answers.Tests} \n
-
-## Frequently asked questions
-* ${answers.Questions} \n
-
-
-![${answers.imgName}](${answers.imageURL}) "\n"
-
-![${answers.RepoName}](${answers.GitHubURL})`
-};
-
-promptUser()
-    .then(function (answers) {
-        const md = generateMd(answers);
-
-        return writeFileAsync("NewREADME.md", md);
-    })
-    .then(function () {
-        console.log("Successfully wrote to md");
-    })
-    .catch(function (err) {
-        console.log(err);
-    });
+init();

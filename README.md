@@ -1,19 +1,53 @@
-# README-O-Matic
+# README.md CLI Generator
+![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
+
+## Description
+
+Create detailed README files from scratch with this command line interface
+
+## Table of Contents 
+
+* [Installation](#installation)
+
+* [Usage](#usage)
+
+* [License](#license)
+
+* [Contributing](#contributing)
+
+* [Tests](#tests)
+
+* [Questions](#questions)
+
+## Installation
+
+To install necessary dependencies, run the following command:
+
+```
+npm install
+```
+
+## Usage
 
 
-![Repo-DEMO](demo.gif)
-
-## Description:
-This app uses the command line terminal to push answers from certain questions to a write a new Markdown file to serve as a README for developers.
 
 ## License
-No license
 
-## Contributors
-NPM packages used
+This project is licensed under the MIT license.
+  
+## Contributing
 
+Contributions can be made through pull requests by creating a separate branch
 
+## Tests
 
-<a href= "https://github.com/Drop-G/README-O-Matic">GitHub</a>
+To run tests, run the following command:
 
-![Repo-Image](code-snapshot.png)
+```
+npm test
+```
+
+## Questions
+
+If you have any questions about the repo, open an issue or contact me directly at tedpetersiv@gmail.com. You can find more of my work at [Drop-G](https://github.com/Drop-G/).
+
