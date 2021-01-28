@@ -24,6 +24,11 @@ const questions = [
     message: "Please write a short description of your project"
   },
   {
+    type: "input",
+    name: "link",
+    message: "Please add the URL to your deployed application"
+  },
+  {
     type: "list",
     name: "license",
     message: "What kind of license should your project have?",

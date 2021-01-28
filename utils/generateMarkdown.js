@@ -33,9 +33,15 @@ ${renderLicenseBadge(data.license)}
 
 ${data.description}
 
+## Link
+
+[${data.title}](${data.link})
+
 ## Table of Contents 
 
 * [Installation](#installation)
+
+* [Deployed Application](#link)
 
 * [Usage](#usage)
 ${renderLicenseLink(data.license)}

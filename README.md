@@ -1,13 +1,19 @@
-# README.md CLI Generator
+# Test
 ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
 
 ## Description
 
-Create detailed README files from scratch with this command line interface
+
+
+## Link
+
+[Test](https://advensure.herokuapp.com/)
 
 ## Table of Contents 
 
 * [Installation](#installation)
+
+* [Deployed Application](#link)
 
 * [Usage](#usage)
 
@@ -24,7 +30,7 @@ Create detailed README files from scratch with this command line interface
 To install necessary dependencies, run the following command:
 
 ```
-npm install
+npm i
 ```
 
 ## Usage
@@ -37,7 +43,7 @@ This project is licensed under the MIT license.
   
 ## Contributing
 
-Contributions can be made through pull requests by creating a separate branch
+
 
 ## Tests
 
@@ -49,5 +55,5 @@ npm test
 
 ## Questions
 
-If you have any questions about the repo, open an issue or contact me directly at tedpetersiv@gmail.com. You can find more of my work at [Drop-G](https://github.com/Drop-G/).
+If you have any questions about the repo, open an issue or contact me directly at dropppindbs@gmail.com. You can find more of my work at [Drop-G](https://github.com/Drop-G/).
 
